@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkMe(){
+            var mostrar = document.getElementById("otros");
+            var textarea = document.getElementById("comentarioLenguajes");
+
+            if(mostrar.checked==true){
+                textarea.style.display="block";
+            } else{
+                textarea.style.display="none";
+            }
+        }
+    </script>
+    <title>Formulario</title>
+</head>
+<body>
+    <main>
+        <h1><u>Formulario</u></h1>
+        <div id="contForm">
+            <form id="formulario" action="mailto:simonrojas.dev@gmail.com" method="get">
+                <div id="divIzquierda">
+                    <h4>Información Personal</h4>
+                    <div id="contCampo">
+                        <div class="contCampoSolo">
+                            <label for="nombre">Nombre:</label>
+                            <input name="nombre" id="nombre" type="text" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="contCampoSolo">
+                            <label for="apellido">Apellido:</label>
+                            <input name="apellido" id="apellido" type="text" placeholder="Ingrese su apellido" required>
+                        </div>
+                        <div class="contCampoSolo">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+                        </div>
+                        <hr>
+                    </div>
+                    <div id="contCheck">
+                        <h4>¿Que lenguajes de programación conoces?</h4>
+                        <input class="check" type="checkbox" name="javascript" id="javascript">
+                        <label for="javascript">JavaScript</label>
+                        <input class="check" type="checkbox" name="python" id="python">
+                        <label for="python">Python</label>
+                        <input class="check" type="checkbox" name="ruby" id="ruby">
+                        <label for="ruby">Ruby</label>
+                        <input class="check" type="checkbox" name="otros" id="otros" onclick="checkMe()">
+                        <label for="otros">Otros</label>
+                    </div>
+                    <span><input id="enviar" type="submit"></span>
+                </div>
+                <div id="divDerecha">
+                    <h4>Comentarios</h4>
+                        <div>
+                            <textarea name="comentario" id="comentario" cols="30" rows="7" placeholder="Ingrese su comentario..."></textarea>
+                        </div>
+                        <div>
+                            <textarea name="comentarioLenguajes" id="comentarioLenguajes" cols="30" rows="5" placeholder="¿Que otros lenguajes...?"></textarea>
+                        </div>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <p>Pagina creada por Simón Rojas. Demostración de formulario.</p>
+        </footer>
+    </main>
+</body>
+</html>
